@@ -10,9 +10,9 @@ The goal of this project is to motivate possible future work for learning sparse
 
 ## Priority Queue of experiments
 0. Apply LDA to the same data as Nik-Zainal, et al. 2016 "Landscape of somatic mutations in 560 breast cancer whole-genome sequences".
-	a. Evaluate learned models for perplexity; reproduce figure 3 from [1]
-	b. Evaluate learned topics for sparsity; reproduce figure 4 from [1]
-1. Apply SAGE and repeat 0a and 0b for SAGE
+	0. Evaluate learned models for perplexity; reproduce figure 3 from [1]
+	1. Evaluate learned topics for sparsity; reproduce figure 4 from [1]
+1. Apply SAGE and repeat parts 0.0 and 0.1 for SAGE
 
 ## Overview of validation plan
 1. Compare learned signature to COSMIC signatures. 
