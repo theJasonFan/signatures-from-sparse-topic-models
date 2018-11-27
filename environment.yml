@@ -1,0 +1,15 @@
+name: sage
+channels:
+  - bioconda
+dependencies:
+  - python>=3.6
+  - anaconda
+  - pandas
+  - numpy
+  - snakemake
+  - statsmodels
+  - scikit-learn
+  - tqdm=4.24
+  - matplotlib
+  - seaborn
+  - gensim
