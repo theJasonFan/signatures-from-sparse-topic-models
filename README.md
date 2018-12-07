@@ -7,6 +7,8 @@ The goal of this project is to motivate possible future work for learning sparse
 -   Do Multinomial models ‘overfit’ to rare mutation categories in the like the way they do for natural language?
 -   What are the differences in terms of signatures learned for SAGE-like vs Multinomial models?
 
+To limit the scope of this project, we only applied SAGE based and multinomial based models to breast cancers.
+
 ## Data:
 To limit the scope of the investigation, we will apply topic models to breast cancer cohorts using the following three datasets:
 
@@ -65,9 +67,12 @@ Figure 9. Total variation of the rarest N terms for the SAGE-CTM model fitted to
 
 In terms of signatures learned by the SAGE-CTM model, for the 560 whole breast cancer genomes, we were able to recover 5 of the 12 signatures found by Nik Zainal et. al in [2] with cosine similarity of greater than 0.9. 
 ![](https://github.com/theJasonFan/signatures-from-sparse-topic-models/blob/master/output/nz2016/SAGE-CTM-vs-COSMIC-sigs.png?raw=true)
-Figure 10. Signatures 1, 2, 3, 13, and 17 were found in 560 whole breast cancer genomes.
+Figure 10. Signatures 1, 2, 3, 13, and 17 were found in 560 whole breast cancer genomes. Cosine similarties of signatures learned by the SAGE-CTM model and COSMIC signatures.
 
 Interestingly, for the 1020 whole breast cancer exomes, we find 12 signatures, 4 of which have cosine similarity greater than or equal to 0.85 with a COSMIC signature. Signature 1, which is found in all cancers is found with high smilarity. Many signatures similar to COSMIC signatures, like signature 10 that is found by the SAGE-CTM are signatures found commonly in bladder and urethelial cancers.
+
+![](https://github.com/theJasonFan/signatures-from-sparse-topic-models/blob/master/output/tcga96/SAGE-CTM-vs-COSMIC-sigs.png?raw=true)
+Figure 10. Cosine similarties of signatures learned by the SAGE-CTM model from 1020 whole exomes of breast cancers from TCGA and COSMIC signatures.
 
 ## Takeaways and conclusions
 Unfortunately, we were unable to tease out the differences of modelling mutational signatures as mixtures multinomial distributions directly versus mixtures of log deviations of mutational term frequencies. From Figure 5, we hypothesize that more data with more active mutational categories would be necessary to see the difference in perplexities of learned models. It is still unclear as to the differences in the robustness of learned signatures in terms of total variation attributed to rare terms. We hypothesize that applying the SAGE-CTM and CTM model to a pan cancer cohort in which rare terms may be restricted to certain cancer types may reveal the differences between dirichlet-multinomial and sparse additive models as reported in [1].
